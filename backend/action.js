@@ -11,6 +11,18 @@ $(document).ready(function(){
 				
 			}
 		})
+
+		events();
+	function events(){
+		$.ajax({
+			url	:	"backend/action.php",
+			method:	"POST",
+			data	:	{GetEvent:1},
+			success	:	function(data){
+				$("#get_events").html(data);
+				
+			}
+		})
 	}
 	$("#signup_form").on("submit",function(event){
 		event.preventDefault();
