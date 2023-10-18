@@ -73,6 +73,19 @@ if(empty($full_name)  || empty($email)  ||
 			echo "register_success";
 			echo "<script> location.href='index.php'; </script>";
             exit;
+
+			//existing email address in our database
+	
+		$sql = "INSERT INTO `participants` 
+		(`p_id`,`event_id`, `fullname`, `email`, 
+		 `mobile`,  `college`, `branch`) 
+		VALUES (NULL,'$event_id', '$full_name',  '$email', 
+		 '$mobile', '$college', '$branch')";
+		
+		if(mysqli_query($con,$sql)){
+			echo "register_success";
+			echo "<script> location.href='index.php'; </script>";
+            exit;
 		}
 	}
 	
