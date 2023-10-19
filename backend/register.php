@@ -14,6 +14,15 @@ if (isset($_POST["full_name"])) {
 	$emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$/";
 	$number = "/^[0-9]+$/";
 
+	$full_name = $_POST["full_name"];
+	$email = $_POST['email'];
+	$event_id = $_POST['event_id'];
+	$mobile = $_POST['mobile'];
+	$college = $_POST['college'];
+	$branch = $_POST['branch'];
+	$name = "/^[a-zA-Z ]+$/";
+	$emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$/";
+	$number = "/^[0-9]+$/";
 if(empty($full_name)  || empty($email)  ||
 	empty($mobile) ) {
 		
