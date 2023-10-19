@@ -12,6 +12,19 @@ $(document).ready(function(){
 			}
 		})
 
+
+
+		events();
+	function events(){
+		$.ajax({
+			url	:	"backend/action.php",
+			method:	"POST",
+			data	:	{GetEvent:1},
+			success	:	function(data){
+				$("#get_events").html(data);
+				
+			}
+		})
 		events();
 	function events(){
 		$.ajax({
