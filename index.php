@@ -6,6 +6,9 @@ include "db/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+  <head>   
+       <title>Codegrip</title>
+  </head>
 <?php 
 
 include "cssjs/css.php";
